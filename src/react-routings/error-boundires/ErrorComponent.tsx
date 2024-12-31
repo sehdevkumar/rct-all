@@ -19,7 +19,7 @@ const ErrorComponent: React.FC = () => {
     return (
         <div className="flex w-full items-center justify-center h-screen bg-red-100">
             <h1 className="text-3xl font-bold text-red-600 text-center">
-                This component will throw an error in a few seconds...
+               { random == 1 ?  'This component may throw an error in a few seconds...' : 'Welcome Back Everything is OK' }
             </h1>
         </div>
     );
