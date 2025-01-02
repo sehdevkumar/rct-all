@@ -1,4 +1,12 @@
+import { usePostLogger } from "../custom-hooks/usePostLoger";
+
 const Landing = () => {
+  
+  const {onInfo} = usePostLogger('http://172.16.120.62:8080','Dashboard', 'sehdev')
+  
+
+
+
   return (
     <div className="min-h-screen h-full">
       {/* Hero Section */}
@@ -13,6 +21,13 @@ const Landing = () => {
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
               Get Started
+            </button>
+
+            <button onClick={()=> {
+              onInfo('Hello')
+              
+            }} className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                Post Log
             </button>
           </div>
         </div>
