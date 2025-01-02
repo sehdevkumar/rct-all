@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useAppSelectors } from "./store/selector";
 import { useAppDispatch } from "./store/store";
 import { SetMessageAction } from "./store/actions";
+import { asyncThunkReducer } from "./store/effect";
 
 
 
@@ -15,6 +16,8 @@ function App() {
     const timerRef = setTimeout(()=> {
       
       dispatch(SetMessageAction("Hey I am Happ to see u...."))
+      dispatch(SetMessageAction("Hi"));
+      dispatch(asyncThunkReducer());
       
     },5000)
      
