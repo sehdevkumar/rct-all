@@ -12,7 +12,7 @@ function withLoading<T extends {}>(
     }
 
     // Pass remaining props to the wrapped component
-    return <WrappedComponent {...(rest as unknown as T)} />;
+    return <WrappedComponent  {...(rest as unknown as T)} />;
   };
 }
 
